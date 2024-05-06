@@ -1,0 +1,17 @@
+.teste1{
+    display: inline-block;
+    background-color: gray;
+    margin:90px;
+    padding: 40px 100px 200px 10px;
+    border-top: 10px solid;
+    border-bottom: 15px solid blueviolet;
+}
+
+#teste2{
+    display: inline-block;
+    background-color: gray;
+    margin:90px;
+    padding: 40px 100px 200px 10px;
+    border: solid;
+    border-width: 10px  40px;
+}

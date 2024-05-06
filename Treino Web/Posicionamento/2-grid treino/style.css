@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+}
+.grid{
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;  /* trabalha com frações do grid */
+    gap: 20px; /* Espaçamento */
+}
+
+.item{
+    display: grid;
+    background-color: #f7f7f7;
+    border: 1px solid #e7e7e7;
+    padding: 20px;
+}
+
+.comprar{
+    background-color: #a8f;
+    color: #103;
+    padding: 10px 20px;
+}

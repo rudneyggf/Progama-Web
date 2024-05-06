@@ -1,0 +1,40 @@
+* {
+  font-family: Arial;
+}
+h1,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 48px;
+  line-height: 1;
+}
+p {
+  font-size: 20px;
+  grid-column: 1/5;
+  /* grid-column: 1/-1 quando quiser 
+  o a última coluna sem saber o número de colunas */
+}
+img {
+  max-width: 100%;
+  grid-column: 1/span 4;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+.comprar {
+  background-color: rgb(60, 83, 214);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  grid-column: 1/2;
+}
+.preco {
+  background-color: #ddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 20px;
+  grid-column: 1/2;
+}

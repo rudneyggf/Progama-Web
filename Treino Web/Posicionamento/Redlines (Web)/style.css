@@ -1,0 +1,112 @@
+@font-face {
+    font-family: Republica;
+    src: url(/Fontes/Republica\ Minor\ 2.0.otf);
+}
+@font-face {
+    font-family: LG_light;
+    src: url(/Fontes/Louis\ George\ Cafe\ Light.ttf);
+}
+@font-face {
+    font-family: LG_bold;
+    src: url(/Fontes/Louis\ George\ Cafe\ Bold.ttf);
+}
+*{
+    background-color:#f7f7f7;
+    font-family: Arial;
+    margin: 0px;
+}
+h1{
+    text-align: center;
+    font-family: Republica;
+    margin: 20px;
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px #ee2211;
+}
+h2{
+    font-size: 30px;
+    background-color: white;
+     grid-row: 2; /* posicionamento de linha para ajeitar o bug de layout*/
+    text-transform: uppercase;
+    font-family: LG_light;
+}
+a{
+    background-color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    color: black;
+    padding: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+img{
+    max-width: 500px; /*impedir a expansão da imagem*/
+}
+p{
+    font-size: 20px;
+    background-color: white;
+}
+footer{
+    text-align: center;
+    background-color: white;
+    font-size: 30px;
+    padding-top:20px;
+    height: 50px;
+}
+.menu{
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    place-content: center;
+    flex-wrap: wrap;
+}
+.principal{
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2,minmax(auto,500px)); /*permitir uma "resposividade" quando não está em tamanho máximo*/
+    grid-template-rows: repeat(2,minmax(auto,500px));
+    margin: 60px;
+    place-items: center;
+}
+.vantagens{
+    display: grid;
+    gap: 20px;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    height: 500px;
+    background-color: white;
+    place-content: center;
+    padding: 10px;
+    
+}
+.topicos_vantagens{
+    font-size: 20px;
+    background-color: white;
+    font-weight: bold;
+    color: #ee2211;
+}
+#destaque{
+    font-size: 40px;
+    text-align: right;
+    margin: 20px;
+    text-transform: uppercase;
+    color: #c6c6c6;
+    font-family: LG_bold;
+}
+.descricao{
+    display: grid;
+    justify-items: right;
+    gap:15px;
+    padding: 20px;
+    background-color: white;
+    height: 460px;
+    grid-template-rows: 1fr repeat(3,auto) 1fr; /*gambiarra de posicionamento da descrição*/
+}
+#ver_mais{
+    color: white;
+    background-color: #ee2211;
+    grid-row: 4; /* posicionamento de linha para ajeitar o bug de layout*/
+}
+#grid_bug{
+    grid-row: 3; /* posicionamento de linha para ajeitar o bug de layout*/
+}
