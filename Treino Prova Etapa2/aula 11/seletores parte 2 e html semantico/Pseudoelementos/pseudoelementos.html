@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: Verdana;
+      }
+
+      p::first-letter {
+        color: red;
+        font-size: xx-large;
+      }
+
+      p::first-line {
+        color: blue;
+        font-variant: small-caps;
+      }
+
+      ::marker {
+        color: cornflowerblue;
+        font-size: 22px;
+      }
+
+      ::selection {
+        color: red;
+        background: yellow;
+      }
+
+      a[target="_blank"] {
+        background-color: aquamarine;
+      }
+
+      [title $="flor"] {
+        border: 3px solid aquamarine;
+      }
+
+      img {
+        max-width: 400px;
+      }
+      [class="top"] {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid neque
+      unde vitae vero quo labore, voluptate earum, quae dolores quam tempora,
+      doloremque numquam velit. Libero dolorum suscipit vero et sunt. Lorem
+      ipsum dolor sit amet, consectetur adipisicing elit. Expedita animi cum
+      ratione deleniti maiores debitis dolores, accusantium optio iusto, amet
+      nam reiciendis hic libero nemo illum. Blanditiis cupiditate quo quas Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Totam iste ea
+      reprehenderit maiores neque velit molestias tenetur cumque, necessitatibus
+      distinctio, rerum quae deserunt saepe adipisci nesciunt error dolore,
+      impedit explicabo.
+    </p>
+     
+    <h2>Lista de compras</h2>
+    <ul>
+      <li>Café</li>
+      <li>Arroz</li>
+      <li>Leite</li>
+    </ul>
+    <p>
+      Os links com um <strong>atributo de destino</strong> recebem um
+      <strong>fundo azulado</strong>.
+    </p>
+    <a href="https://www.w3schools.com">w3schools</a>
+    <a href="" target="_blank">Mdn Web docs</a>
+    <a href="" target="_top">Web dev</a>
+
+    <p>
+      Todas as imagens com o <strong> atributo titulo</strong> contento a
+      <strong>palavra "flor"</strong> recebem uma borda azulada
+    </p>
+
+    <img src="img/arvore com coruja.jpg" alt="" title="arvore com coruja e flor" />
+    <img src="img/flor azul.jpg" alt="" title="flor azul" />
+    <img src="img/vendedora de flores.webp" alt="" title="vendedora de flores">
+
+    <p>
+      Seleciona os elementos com atributo
+      <strong>examente específicado</strong>, ou o valor específicado
+      <strong>sequido por um hifen (-)</strong> recebe um background azulado
+    </p>
+    <h2 class="top-header">Seja Bem Vindo!</h2>
+    <p class="top-text">Aprendendo o seletores d eatributos !</p>
+    <p class="topcontent">CSS é muito legal!</p>
+  </body>
+</html>

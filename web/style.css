@@ -1,0 +1,23 @@
+a {
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.links {
+    color: blue;
+    text-decoration: underline;
+}
+
+#mensagem {
+    color: orange;
+    font-size: 20px;
+}
+
+#promo {
+    color: red;
+}
+
+#black_friday {
+    color: black;
+}

@@ -1,0 +1,15 @@
+*{
+    background-color: #a7c2a7;
+    font-family: sans-serif;
+    
+}
+h1{
+    color: blue;
+}
+h2{
+    color: red;
+}
+p{
+    text-align: justify;
+    font-size: 2vw;
+}

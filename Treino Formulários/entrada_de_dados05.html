@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="icarros">Carros:</label>
+        <select name="carros" size="7" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            <option value="toyota" selected>Toyota</option>
+            <option value="jeep">Jeep</option>
+            <option value="renault">Renault</option>
+            <option value="nissan">Nissan</option>
+        </select>
+    </form>
+    <br>
+    <br>
+    <form action="">
+        <label for="iestados">Estados:</label>
+        <select name="estados" id="estados" size="7" multiple>
+            <optgroup label="Região Nordeste">
+                <option value="PI">Piaui</option>
+                <option value="CE">Ceará</option>
+                <option value="MA">Maranhão</option>
+            </optgroup>
+
+            <optgroup label="Região Sudeste">
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </optgroup>
+        </select>
+    </form>
+    <br>
+    <br>
+    <form action="">
+        <textarea name="messagem" id="" cols="30" rows="10">
+            Digite Seu texto aqui!</textarea>
+    </form>
+
+    <form action="">
+        <button type="button" onclick="alert('Você clicou mesmo!')">
+        Clique aqui!</button>
+    </form>
+</body>
+
+    <br>
+    <br>
+    <br>
+
+<form action="">
+    <input type="text">
+    <datalist id="idlista">
+        <option value="Internet Explorer"></option>
+        <option value="Firefox">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <input type="submit" value="Add Elemento">
+</form>
+
+<h3>Elemento de Saída "output"</h3>
+<form oninput="x.value=parseInt(inivel.value)">
+    <label for="inivel">Nivel de Satisfação:</label>
+    <input type="range" name="nivel" id="inivel" value="3" min="1" max="5">
+    <output name="x">3</output>
+</form>
+
+<h3>Somando Valores</h3>
+    <form action="">
+        <p>
+            <label for="in1">Primeiro Valor:</label>
+            <input type="number" name="n1" id="in1" min="0" max="100" value="0"
+            required oninput="isoma.innerHTML=Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="in2">Segundo Valor:</label>
+            <input type="number" name="n2" id="in2" min="0" max="100" value="0"
+            required oninput="isoma.innerHTML=Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="isoma">Soma:</label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+    </form>
+
+
+    <h3>Calculando sua Idade!</h3>
+    <form action="">
+        <p>
+            <label for="iano">Qual ano você nasceu:</label>
+            <input type="number" name="ano" min="1900" id="iano"
+            max="2024" oninput="calculaIdade()">
+        </p>
+
+        <p>
+            <label for="iidade">Sua idade é</label>
+            <output name="idade" id="iidade">0</output>
+        </p>
+    </form>
+
+    <script>
+        function calculaIdade(){
+            let anoAtual= new Date().getFullYear()
+            iidade.innerHTML=Number(anoAtual)-Number(iano.value)
+        }
+    </script>
+</html>
