@@ -1,0 +1,67 @@
+/* Fiz a responsividade me baseando  no devTools da google e 
+principalmente tendo como guia as dimensões dos seguintes aparelhos: Mobile L , Tablet, Laptop L */
+
+body{
+    font-family: monospace;
+    background-color: #121212;
+    margin: 0;
+}
+main{
+    color: whitesmoke;
+    margin-bottom: 100px;
+}
+header,nav,footer{
+    background-color: rgb(26, 24, 24);
+    width: 100%;
+    text-align: center;
+
+}
+nav{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+nav>a{
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    color: #121212;
+    text-decoration: none;
+    border: solid black;
+    border-radius: 20px;
+    background-color: rgb(224, 148, 7);
+    padding: 15px;
+}
+h1{
+    color: rgb(224, 148, 7);
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 4px 5px black;
+    margin: 0;
+}
+
+footer{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+justify-items: center;
+position: fixed;
+bottom: 0;
+color: whitesmoke;
+padding: 10px 0;
+width: 100%;
+}
+nav> a:hover{
+    color: white;
+}
+nav> a:active{
+    background-color: rgb(92, 6, 6);
+}
+footer p{
+    grid-column: 2;
+    padding-left:5px ;
+}
+span{
+    grid-column: 3;
+}
+.redes_sociais{
+    padding-right: 5px;
+}

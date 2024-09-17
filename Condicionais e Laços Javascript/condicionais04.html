@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="res5"></p>
+</body>
+<script>
+    let categoria=10
+    switch(categoria){
+        case 1:
+        case 2:
+        case 3:
+            categoria="categoria A";break
+        case 4:
+        case 5:
+            categoria="categoria B"; break
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            categoria="categoria C"; break
+        default:
+            categoria="Categoria inexistente!"
+    }
+    document.getElementById("res5").innerHTML=categoria;
+</script>
+</html>

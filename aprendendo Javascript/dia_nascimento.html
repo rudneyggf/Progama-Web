@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra o dia da semana que você nasceu</title>
+</head>
+<body>
+    <h1>Descubra o dia da semana que você nasceu</h1>
+
+    <form action="">
+        <label for="ID_data_nascimento">Sua Data de Nascimento</label>
+        <input type="date" id="ID_data_nascimento">
+    </form>
+        <button type="button" onclick="calculaData()">Mostrar Dia</button>
+        <output id="dia_semana"></output>
+</body>
+<script>
+    function calculaData(){
+        const valor_data_nascimento=document.getElementById("ID_data_nascimento").value;
+        data_nascimento= new Date(valor_data_nascimento);
+        data_nascimento.setDate(data_nascimento.getDate()+1);
+        const dia_semana = data_nascimento.toLocaleDateString('pt-BR', { weekday: 'long',  timeZone: 'America/Sao_Paulo' })
+        document.getElementById("dia_semana").innerHTML=dia_semana;
+    }
+</script>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imagens/beer icon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="estilo_principal.css">
+    <title>Número Mágico!</title>
+    <style>
+        main{
+            background-image:url("../imagens/mesa.png");
+            background-size: 50%; /* Faz a imagem cobrir o conteúdo */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita a repetição da imagem */
+            color: black;
+            background-color: black;
+            }
+        #menu_reinicio{
+            display: none;
+        }
+        #numero_magico_jogo{
+          display: flex;
+        }
+        .flex{
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          padding-top: 130px;
+          padding-bottom: 75px;
+          padding-left: 135px;
+        }
+        div p,label,input,button{
+          flex-basis: 30px;
+          flex-wrap: wrap;
+          max-width: 250px;
+          
+        }
+        output{
+          padding-right: 15px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="titulo_principal" class="laranja">
+       <h1>Numero Mágico</h1>
+      </div>
+      <h2 class="laranja">
+        Bem-vindo à mesa de jogos.
+      </h2>
+    </header>
+    <main>
+        <div id="numero_magico_jogo" class="flex">
+            <label for="id_palpite">Digite seu palpite do número mágico</label>
+            <input type="number" id="id_palpite">
+            <button onclick="verificar_resposta()">Verificar</button>
+            <output id="feedback"></output>
+        </div>
+        <div id="menu_reinicio" class="flex">
+           <p>Deseja jogar novamente?</p>
+           <button><a href="Taverna.html"  style="text-decoration: none; color: black;">Não</a></button>
+           <button onclick="reinicia_jogo()">Sim</button>
+        </div>
+    </main>
+    <footer class="laranja">
+        <p>@ Copyright 2024 - Desenvolvido por Rudney</p>
+    </footer>
+  </body>
+   <script>
+    let numero_magico= Math.floor(Math.random() * 50)+ 1;
+    let tentativas = 1;
+
+    function verificar_resposta(){
+      let palpite = document.getElementById('id_palpite').value
+      if(palpite==""){
+        document.getElementById('feedback').innerHTML='Você não digitou nada'
+        document.getElementById('id_palpite').focus();
+        document.getElementById('id_palpite').value=""
+      }else if(numero_magico>palpite){
+        document.getElementById('feedback').innerHTML='o número mágico é maior!'
+        tentativas++;
+        document.getElementById('id_palpite').focus();
+        document.getElementById('id_palpite').value=""
+      }else if(numero_magico<palpite){
+        document.getElementById('feedback').innerHTML='o número mágico é menor!'
+        tentativas++;
+        document.getElementById('id_palpite').focus();
+        document.getElementById('id_palpite').value=""
+      }else{
+        alert(`Parabéns, você venceu em ${tentativas} tentativas.`);
+        fim_jogo();
+      }
+    }
+
+    function fim_jogo(){
+      document.getElementById('numero_magico_jogo').style.display='none';
+      document.getElementById('menu_reinicio').style.display='flex';
+    }
+    function reinicia_jogo(){
+      tentativas = 1;
+      numero_magico = Math.floor(Math.random() * 50)+ 1
+       document.getElementById('menu_reinicio').style.display='none';
+       document.getElementById('numero_magico_jogo').style.display='flex';
+    }
+   </script> 
+</html>

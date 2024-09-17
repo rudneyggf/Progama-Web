@@ -1,0 +1,25 @@
+*{
+    margin: 5px;
+    padding: 5px;
+}
+html{
+    font-family: sans-serif,Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    line-height: 1.5em ;
+}
+header{
+    text-align: center;
+}
+footer{
+    display: none;
+}
+article{
+    width: 100%;
+}
+article[class='ultimo']::after{
+    content: 'Impressão usando recursos de responsividade';
+    border-top: solid;
+    font-style: italic;
+    font-weight: bold;
+    display: block;
+}

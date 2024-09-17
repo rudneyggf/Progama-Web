@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      [class*="col-"] {
+        float: left;
+        border: 1px solid blue;
+        box-sizing: border-box;
+        padding: 10px;
+      }
+      /*Colunas*/
+      @media only screen and (max-width: 600px) {
+        * {
+          background-color: #d7f7b7;
+        }
+        -p .col-p-1 {
+          width: 8.33%;
+        }
+        .col-p-2 {
+          width: 16.66%;
+        }
+        .col-p-3 {
+          width: 25%;
+        }
+        .col-p-4 {
+          width: 33.33%;
+        }
+        .col-p-5 {
+          width: 41.66%;
+        }
+        .col-p-6 {
+          width: 50%;
+        }
+        .col-p-7 {
+          width: 58.33%;
+        }
+        .col-p-8 {
+          width: 66.66%;
+        }
+        .col-p-9 {
+          width: 75%;
+        }
+        .col-p-10 {
+          width: 83.33%;
+        }
+        .col-p-11 {
+          width: 91.66%;
+        }
+        .col-p-12 {
+          width: 100%;
+        }
+      }
+
+      @media only screen and (min-width: 601px) and (max-width: 1200px) {
+        * {
+          background-color: #bdfee8;
+        }
+        .col-m-1 {
+          width: 8.33%;
+        }
+        .col-m-2 {
+          width: 16.66%;
+        }
+        .col-m-3 {
+          width: 25%;
+        }
+        .col-m-4 {
+          width: 33.33%;
+        }
+        .col-m-5 {
+          width: 41.66%;
+        }
+        .col-m-6 {
+          width: 50%;
+        }
+        .col-m-7 {
+          width: 58.33%;
+        }
+        .col-m-8 {
+          width: 66.66%;
+        }
+        .col-m-9 {
+          width: 75%;
+        }
+        .col-m-10 {
+          width: 83.33%;
+        }
+        .col-m-11 {
+          width: 91.66%;
+        }
+        .col-m-12 {
+          width: 100%;
+        }
+      }
+
+      @media only screen and (min-width: 1201px) {
+        * {
+          background-color: #c2c0c4;
+        }
+        .col-g-2 {
+          width: 8.33%;
+        }
+        .col-g-2 {
+          width: 16.66%;
+        }
+        .col-g-3 {
+          width: 25%;
+        }
+        .col-g-4 {
+          width: 33.33%;
+        }
+        .col-g-5 {
+          width: 41.66%;
+        }
+        .col-g-6 {
+          width: 50%;
+        }
+        .col-g-7 {
+          width: 58.33%;
+        }
+        .col-g-8 {
+          width: 66.66%;
+        }
+        .col-g-9 {
+          width: 75%;
+        }
+        -g .col-g-10 {
+          width: 83.33%;
+        }
+        .col-g-11 {
+          width: 91.66%;
+        }
+        .col-g-12 {
+          width: 100%;
+        }
+      }
+    </style>
+    <title>Responsividade-Usando Grid 01</title>
+  </head>
+  <body>
+    <header class="col-p-12 col-m-12 col-g-12">
+      <h1>Título da Página Responsiva</h1>
+      <p>Descrição do Topo da Página</p>
+    </header>
+    <article class="col-p-12 col-m-6 col-g-4">
+      <h2>Brasil</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+        incidunt provident dicta unde tempora ea soluta recusandae quaerat
+        aliquid pariatur doloremque reprehenderit aperiam consectetur, molestiae
+        tenetur, error deserunt quibusdam. Eius.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates a ea
+        officia rerum, suscipit debitis velit necessitatibus consectetur
+        consequuntur voluptatibus saepe! Neque saepe hic deleniti expedita quam
+        sint veritatis eligendi!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+        voluptatem ratione corporis ipsa tempore soluta expedita illum modi
+        harum, asperiores dolor, voluptas impedit vero est! Temporibus laborum
+        corrupti excepturi natus!
+      </p>
+    </article>
+
+    <article class="col-p-12 col-m-6 col-g-4"> 
+        <h2>França</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            incidunt provident dicta unde tempora ea soluta recusandae quaerat
+            aliquid pariatur doloremque reprehenderit aperiam consectetur, molestiae
+            tenetur, error deserunt quibusdam. Eius.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates a ea
+            officia rerum, suscipit debitis velit necessitatibus consectetur
+            consequuntur voluptatibus saepe! Neque saepe hic deleniti expedita quam
+            sint veritatis eligendi!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            voluptatem ratione corporis ipsa tempore soluta expedita illum modi
+            harum, asperiores dolor, voluptas impedit vero est! Temporibus laborum
+            corrupti excepturi natus!
+        </p>
+    </article>
+
+    <article class="col-p-12 col-m-6 col-g-4">
+        <h2>Alemanha</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            incidunt provident dicta unde tempora ea soluta recusandae quaerat
+            aliquid pariatur doloremque reprehenderit aperiam consectetur, molestiae
+            tenetur, error deserunt quibusdam. Eius.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates a ea
+            officia rerum, suscipit debitis velit necessitatibus consectetur
+            consequuntur voluptatibus saepe! Neque saepe hic deleniti expedita quam
+            sint veritatis eligendi!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            voluptatem ratione corporis ipsa tempore soluta expedita illum modi
+            harum, asperiores dolor, voluptas impedit vero est! Temporibus laborum
+            corrupti excepturi natus!
+        </p>
+    </article>
+    
+  </body>
+</html>

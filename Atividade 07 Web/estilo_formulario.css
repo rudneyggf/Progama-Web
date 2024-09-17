@@ -1,0 +1,45 @@
+ body{
+            background-color: rgb(201, 197, 197);
+            font-family: sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+        main{
+            background-color: white;
+            border-style: inset;
+            border-radius: 10px; 
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        input[type="checkbox"],input[type="submit"]{
+            align-self:self-start;
+        }
+        legend{
+            font-weight: bold;
+        }
+        select{
+            width: 100%;
+        }
+        .borda_cinza{
+            border: 1px solid rgb(201, 197, 197);
+            border-radius: 5px; 
+            padding: 5px; 
+        }
+        fieldset{
+            border: 1px solid rgb(201, 197, 197);
+        }
+        #botao_verde{
+            padding: 10px 15px;
+            color: white;
+            background-color: rgb(73, 173, 73);
+            border: solid 2px black;
+            border-radius: 5px;
+        }
+        output{
+            color:rgb(73, 173, 73);
+            font-weight: bold;
+        }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mostraData1"></p>
+    <p id="mostraData2"></p>
+    <p id="mostraData3"></p>
+    <p id="mostraData4"></p>
+    <p id="mostraData5"></p>
+    <p id="mostraData6"></p>
+</body>
+<script>
+    const data1=new Date(86400000);
+    document.getElementById("mostraData1").innerHTML=data1;
+
+    const data2= new Date(2018,11,24,10,33,30);
+    document.getElementById("mostraData2").innerHTML=data2;
+
+    const data3= new Date(2018,12,24,10,33,30);
+    document.getElementById("mostraData3").innerHTML=data3;
+
+    const data4= new Date(0);
+    document.getElementById("mostraData4").innerHTML=data4;
+
+    const data5 = new Date(86400000);
+    document.getElementById("mostraData5").innerHTML=data5;
+
+    const data6 = new Date(100000000000);
+    document.getElementById("mostraData6").innerHTML=data6;
+
+</script>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imagens/beer icon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="estilo_principal.css">
+    <title>Tabuada divertida!</title>
+    <style>
+        main{
+            background-image:url("../imagens/mesa.png");
+            background-size: 50%; /* Faz a imagem cobrir o conteúdo */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita a repetição da imagem */
+            color: black;
+            background-color: black;
+            }
+        #tabuada_jogo,#menu_reinicio{
+            display: none;
+        }
+        #cadastro{
+          display: flex;
+        }
+        .flex{
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          padding-top: 80px;
+          padding-bottom: 75px;
+          padding-left: 135px;
+        }
+        div p,label,input,button{
+          flex-basis: 30px;
+          flex-wrap: wrap;
+          max-width: 200px;
+          
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="titulo_principal" class="laranja">
+       <h1>Tabuada divertida</h1>
+      </div>
+      <h2 class="laranja">
+        Bem-vindo à mesa de jogos.
+      </h2>
+    </header>
+    <main>
+        <div id="cadastro" class="flex">
+            <p>Digite seu nome</p>
+            <label for="id_nome">Nome:</label>
+            <input type="text" id="id_nome">
+            <input type="button" onclick="coleta_nome()" value="Enviar">
+        </div>
+        <div id="tabuada_jogo" class="flex">
+            <p id="pergunta">Quanto é?</p>
+            <input type="number" id="id_tabuada">
+            <button onclick="verificar_resposta()">Responder</button>
+        </div>
+        <div id="menu_reinicio" class="flex">
+           <p>Deseja jogar novamente?</p>
+           <button><a href="Taverna.html"  style="text-decoration: none; color: black;">Não</a></button>
+           <button onclick="reinicia_jogo()">Sim</button>
+        </div>
+    </main>
+    <footer class="laranja">
+        <p>@ Copyright 2024 - Desenvolvido por Rudney</p>
+    </footer>
+  </body>
+   <script>
+    let pontos = 0;
+    let fases = 5;
+    let multiplicando;
+    let multiplicador;
+    let fase_atual = 1;
+
+    function coleta_nome(){
+        nome=document.getElementById('id_nome').value;
+        document.getElementById('cadastro').style.display='none';
+        document.getElementById('tabuada_jogo').style.display='flex';
+        fase_atual=1;
+        pontos=0;
+        tabuada();
+    }
+
+    function tabuada(){
+      multiplicando = Math.floor(Math.random() * 10) + 1;
+      multiplicador = Math.floor(Math.random() * 10) + 1;
+      document.getElementById('pergunta').innerHTML=`Fase ${fase_atual}: ${multiplicando} X ${multiplicador}?`;
+    }
+
+    function verificar_resposta(){
+      let palpite = parseInt(document.getElementById('id_tabuada').value);
+      let resposta_correta = multiplicando * multiplicador;
+      if(palpite === resposta_correta){
+        pontos=pontos+2;
+      } else {
+        pontos--
+      }
+      fase_atual++;
+      if(fase_atual <= fases){
+        tabuada();
+        document.getElementById('id_tabuada').value = "";
+      } else if(pontos== 10){
+        alert(`Parabéns ${nome}, você atingiu o nível máximo do jogo! 10.0 pontos`);
+        fim_jogo();
+      }else{
+        alert(`${nome}, você fez ${pontos} pontos.`);
+        fim_jogo();
+      }
+    }
+    function fim_jogo(){
+      document.getElementById('tabuada_jogo').style.display='none';
+      document.getElementById('menu_reinicio').style.display='flex';
+    }
+    function reinicia_jogo(){
+       document.getElementById('menu_reinicio').style.display='none';
+       document.getElementById('cadastro').style.display='flex';
+    }
+   </script> 
+</html>

@@ -1,0 +1,27 @@
+/* Fiz a responsividade me baseando  no devTools da google e 
+principalmente tendo como guia as dimensões dos seguintes aparelhos: Mobile L , Tablet, Laptop L */
+
+header>img{
+    max-width: 100px;
+}
+
+header>h1{
+    font-size: 3em;
+}
+
+nav{
+    gap:20px;
+}
+
+nav>a{
+    font-size: 20px;
+    flex-basis: 100px;
+}
+
+footer img{
+    max-width: 50px;
+}
+
+footer >p{
+ font-size: 14px;
+}

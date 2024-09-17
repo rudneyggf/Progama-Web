@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showFonte() {
+            document.getElementById('msg').style.display = 'block';
+            document.getElementById('show').style.display = 'none';
+            document.getElementById('ocult').style.display = 'inline';
+        }
+
+        function hideFonte() {
+            document.getElementById('msg').style.display = 'none';
+            document.getElementById('show').style.display = 'inline';
+            document.getElementById('ocult').style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Alterando valores de atributos HTML</h3>
+    <button onclick="document.getElementById(img).src='img/javascript_img/ligada.gif'">Liga</button>
+
+    <img src="img/javascript_img/desligada.gif" id="img" style="width:100px;">
+
+    <p id="texto"> O Javascript pode alterar o estilo de um elemento HTML.</p>
+    <button type="button" onclick="document.getElementById('texto').style.fontSize='25px'">Zoom+</button>
+    <button type="button" onclick="document.getElementById('texto').style.fontSize='16px'">Zoom-</button>
+    <button type="button" onclick="document.getElementById('texto').style.color='blue'">Texto em azul</button>
+    <button type="button" onclick="document.getElementById('texto').style.color='black'">Texto em Preto</button>
+
+    <h2>Ocultando e Exibindo elementos HTML</h2>
+    <p>O Javascript pode alterar o estilo de um elemento HTML.</p>
+
+    <p id="msg" style="display: none;">Fonte: <a href="https://www.w3schools.com
+        " target="_blank">w3schools.com</a></p>
+
+    <button id="show" type="button" onclick="showFonte();">Exibir Fonte</button>
+    <button id="ocult" type="button" onclick="hideFonte();" style="display: none;">Ocultar Fonte</button>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+</head>
+<body>
+    <p id="res"></p>
+   
+</body>
+
+<script>
+        const produtos =["Arroz","Feijão","Chá","Café","Leite"]
+        let qtde=produtos.length
+        let texto="<ul>"
+        produtos.forEach(mostrar)
+        texto+="</ul>"
+            document.getElementById("res").innerHTML=texto;
+        function mostrar(valor){
+            texto+="<li>"+ valor+"</li>"
+        }
+    </script>
+</html>

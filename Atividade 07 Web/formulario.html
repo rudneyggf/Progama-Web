@@ -1,0 +1,108 @@
+
+
+<!-- Aluno: Rudney Gabriel Gonçalves Fonseca -->
+<!--matricula: 20231SI0025 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição para o Concurso de Fotografia</title>
+    <link rel="stylesheet" href="estilo_formulario.css">
+
+    <style>
+        @media only screen and (max-width:452px) {
+            form{
+                margin: 20px;
+            }
+            label,legend{
+                font-size: 16px;
+            }
+            output{
+                font-size: 16px;
+            }
+            .borda_cinza{
+                font-size: 16px;
+            }
+        }
+
+        @media only screen and (min-width:453px){
+            form{
+                margin: 40px;
+            }
+            label,legend{
+                font-size: 20px;
+            }
+            output{
+                font-size: 17px;
+            }
+            .borda_cinza{
+                font-size: 17px;
+            }
+        }
+    </style>
+    <script>
+        function dados_enviados(){
+            event.preventDefault();
+            id_msg_confirmacao.innerHTML=(`Obrigado,${inome.value}! Sua inscrição foi realizada com sucesso.`)
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Inscrição para o Concurso de Fotografia</h1>
+    </header>
+
+    <main>
+        <form action="">
+            <label for="inome"> Nome Completo:</label>
+            <input type="text" name="nome" id="inome" class="borda_cinza">
+
+            <label for="iemail">E-mail:</label>
+            <input type="email" name="email" id="iemail" class="borda_cinza">
+
+            <fieldset>
+                <legend>Categoria:</legend>
+                 <input type="radio" name="categoria" id="ipaisagem" value="Paisagem">
+                 <label for="ipaisagem">Paisagem</label>
+
+                 <input type="radio" name="categoria" id="iretrato" value="Retrato" checked>
+                 <label for="iretrato">Retrato</label>
+                
+                 <input type="radio" name="categoria" id="inatureza" value="Natureza">
+                 <label for="inatureza">Natureza</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tipo do arquivo:</legend>
+                <label for="iarquivo">Selecione:</label>
+                <select name="tipo_aqruivo" id="itipo" class="borda_cinza">
+                    <option value="JPG">JPG</option>
+                    <option value="JPEG">JPEG</option>
+                    <option value="PNG">PNG</option>
+                    <option value="TIFF">TIFF</option>
+                </select>
+            </fieldset>
+            
+            <label for="idata">Data da Foto:</label>
+            <input type="date" name="data" id="idata" max="2024-08-23" class="borda_cinza">
+            <br>
+            <label for="idescricao">Descrição da Fotografia:</label>
+            <textarea name="descricao" id="idescricao" rows="6" class="borda_cinza"></textarea>
+
+            <div>
+                <input type="checkbox" name="notificacao" id="inotificacao" value="desejo">
+                <label for="inotificacao">Desejo receber notificação sobre futuros concursos</label>
+            </div>
+
+            <br>
+            <label for="ifotografia">Upload da Fotogradia:</label>
+            <input type="file" name="fotografia"  id="ifotografia" class="borda_cinza"  accept=".jpg, .jpeg, .png, .tiff">
+            
+            <input type="submit" value="Enviar" id="botao_verde" onclick="dados_enviados()">
+            <br>
+            <output name="msg_confirmacao" id="id_msg_confirmacao"></output>
+        </form>
+    </main>
+</body>
+</html>

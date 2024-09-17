@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p id="arrayObj"></p>
+     <p id="arrayTypeof"></p>
+     <p id="isArray1"></p>
+     <p id="isArray2"></p>
+</body>
+
+<script>
+    // Objeto
+    const pessoa = {nome:"Pedro",
+        sobrenome:"Silva",
+        idade:27,
+        cor:"pardo"
+    }
+    document.getElementById("arrayObj").innerHTML="Nome: "+pessoa.nome +"<br>SobreNome: "+pessoa.sobreNome
+    +"<br>Idade: "+pessoa.idade+"<br>Cor: "+pessoa.cor
+
+    //Array
+    const aluno=["Maria","Zé","Silva"]
+    //Qual o tipo da variável? Vai dizer que é Objeto
+    document.getElementById("arrayTypeof").innerHTML=typeof aluno
+
+    //Como sabe se a variável é um Array?
+    document.getElementById("isArray1").innerHTML=Array.isArray(aluno)
+    document.getElementById("isArray2").innerHTML=Array.isArray(pessoa)
+</script>
+</html>

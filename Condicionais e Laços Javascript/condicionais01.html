@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="res"></p>
+    <p id="res2"></p>
+</body>
+
+<script>
+    const relogio= 12;
+    if(relogio>11){
+        document.getElementById("res").innerHTML="Boa Tarde";
+    }
+    if(relogio>17){
+        document.getElementById("res").innerHTML="Boa noite!";
+    }
+    if(relogio<12){
+        document.getElementById("res").innerHTML="Bom Dia!";
+    }
+
+    const idade= 17
+    let msg
+
+    if(idade<18){
+        msg="Não pode tirar CNH!"
+    }else{
+        msg="Pode tirar CNH"
+    }
+    document.getElementById("res2").innerHTML=msg
+</script>
+</html>

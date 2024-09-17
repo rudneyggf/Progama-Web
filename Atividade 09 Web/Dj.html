@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 9 Revisao</title>
+    <link rel="shortcut icon" href="botao-play.png" type="image/x-icon" />
+    <style>
+      body {
+        background-color: rgb(101, 147, 207);
+      }
+      header {
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        color: white;
+      }
+      img {
+        max-width: 90px;
+        max-height: 60px;
+      }
+      div {
+        display: grid;
+        grid-template-columns: repeat(3, 250px);
+        gap: 10px;
+        place-content: center;
+        margin-top: 120px;
+      }
+      #stopb {
+        grid-column: 1/-1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="botao-play.png" alt="" />
+      <h1>Audio Play Music</h1>
+    </header>
+    <audio
+      id="bankai"
+      src="audio/Bleach Ichigo Saying Bankai In Sub.mp3"
+    ></audio>
+    <audio id="p3" src="audio/Mass Destruction.mp3"></audio>
+    <audio id="buster" src="audio/MEGAMAN X BUSTER CHARGE SOUND.mp3"></audio>
+    <audio
+      id="SOD"
+      src="audio/System Of A Down - I-E-A-I-A-I-O (Official Audio).mp3"
+    ></audio>
+    <audio
+      id="dracula"
+      src="audio/What is a man_ A miserable little pile of secrets. But enough talk, have at you!.mp3"
+    ></audio>
+    <audio id="mario" src="audio/YAHOO SOUND EFFECT (MARIO).mp3"></audio>
+    <div>
+      <button onclick="playAudio('bankai')">(A) Audio01</button>
+      <button onclick="playAudio('p3')">(B) Audio02</button>
+      <button onclick="playAudio('buster')">(C) Audio03</button>
+      <button onclick="playAudio('SOD')">(D) Audio04</button>
+      <button onclick="playAudio('dracula')">(E) Audio05</button>
+      <button onclick="playAudio('mario')">(F) Audio06</button>
+      <button id="stopb" onclick="stopAll()">Stop/all</button>
+    </div>
+  </body>
+  <script>
+    function playAudio(id){
+        document.getElementById(id).play();
+    }
+    function stopAll(){
+        audios= document.getElementsByTagName('audio');
+        for(let i=0;i<audios.length;i++){
+            audios[i].pause();
+            audios[i].currentTime=0;
+        }
+    }
+
+    document.addEventListener('keydown',function(event){
+            switch(event.key.toUpperCase()){
+                case 'A':
+                    playAudio('bankai');
+                    break;
+                case 'B':
+                    playAudio('p3');
+                    break;
+                case 'C':
+                    playAudio('buster');
+                    break;
+                case 'D':
+                    playAudio('SOD');
+                    break;
+                case 'E':
+                    playAudio('dracula');
+                    break;
+                case 'F':
+                    playAudio('mario');
+                    break;
+                case ' ': 
+                    stopAll();
+            break;
+            }
+        });
+  </script>
+</html>
