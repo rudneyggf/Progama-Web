@@ -1,1 +1,1 @@
-# Exercícios da cadeira de Progamação Web
+# Exercícios da cadeira de Programação Web
